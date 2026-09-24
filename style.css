@@ -1,0 +1,81 @@
+/* Custom PulseFit Cyber Theme Enhancements */
+
+@keyframes pulseSlow {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.08);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 8s ease-in-out infinite;
+}
+
+/* Active Nav Indicator */
+.nav-link.active {
+  color: #22d3ee !important;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #06b6d4;
+  border-radius: 9999px;
+  box-shadow: 0 0 10px #06b6d4;
+}
+
+/* Swiper Custom Styling */
+.swiper-pagination-bullet {
+  background: #475569 !important;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #06b6d4 !important;
+  width: 26px !important;
+  border-radius: 9999px !important;
+  opacity: 1;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.6);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #06b6d4 !important;
+  transform: scale(0.7);
+}
+
+/* FAQ Active State */
+.faq-item.active {
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.06);
+}
+
+.faq-item.active .faq-btn i {
+  transform: rotate(180deg);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #07090e;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+}
